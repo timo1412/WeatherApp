@@ -116,7 +116,7 @@ def vytvorUvodneOkno():
 
 #=============ZISKANIE DAT POMOCOU REQ==========================
 OWN_Endpoint = "https://api.openweathermap.org/data/2.5/onecall"
-api_key = '378d969c0481b240225a376c51d6f839'
+api_key = 'ead6348beab96ad975ab9cb0cb3206ec'
 
 
 #ošetrit viacrozmerny string
@@ -135,9 +135,9 @@ print(f" laon 18 je : {weatherParams['lon']}")
 
 response = requests.get(OWN_Endpoint , params= weatherParams)
 print(response)
-#data = response.json()
-from data import data1
-data = data1
+data = response.json()
+# from data import data1
+# data = data1
 #print(data)
 
 #=============ROZDELENIE DAT==============
@@ -178,35 +178,6 @@ hladajButton.grid(row=3,column=1)
 
 oknoSuradnic.mainloop()
 
-
-#canvas = Canvas(width=800,height=200)
-#canvas.grid(row=0,column=0)
-
-
-
-
-# df= DataFrame(grafData , columns= ['Teplota' , 'datumDna'])
-# print(df)
-#
-# data2 = {'Datum': [7.2,8.2,9.2,10.2,11.2,12.2,13.2,14.2,15.2,16.2],
-#          'Teplota_dni': [20,22,19,21,15,14,10,15,25,25]
-#        }
-# df2 = DataFrame(data2,columns=['Datum','Teplota_dni'])
-# print (df2)
-#
-# figure2 = plt.Figure(figsize=(5,4) , dpi=100)
-# ax2 = figure2.add_subplot(111)
-# line2 = FigureCanvasTkAgg(figure2,uvodne_oko)
-# line2.get_tk_widget().grid(row=1,column=2)
-# df2 = df2[['Datum' , 'Teplota_dni']].groupby('Datum').sum()
-# df2.plot(kind="line" , legend=True , ax = ax2 ,color='r' , marker = 'x' , fontsize=10)
-# ax2.set_title('Teplota_dni vs Datum')
-
-# xpoints = np.array([0, 6])
-# ypoints = np.array([0, 250])
-#
-# plt.plot(xpoints, ypoints)
-# plt.show()
 
 
 
